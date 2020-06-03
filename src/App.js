@@ -37,9 +37,15 @@ export default class extends React.Component
         <div className = "userName" > User Name : { this.state.username } </div>
         
         <div className = "info" >
+          <p>Name : {this.state.info.name}</p>
+          <p>Bio : {this.state.info.bio}</p>
+          <p>Public Repos : {this.state.info.public_repos}</p>
         </div>
         <div className = "Followers">
-
+          Followers: 
+          <ul>
+            { this.state.followers.map( follower => <li key = { follower.id }> Login: {  follower.login }   </li> ) }
+          </ul>
         </div>
 
         {console.log( this.state )}
